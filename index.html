@@ -8,41 +8,57 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
         <div class="burger-menu"></div>
-        <img src="" alt="banner" />
-        <h2>Lets make somethin greate</h2>
-        <p>be a good developer, write clean code, use DRY, KISS, YAGNM</p>
-      </div>
+        <!-- <img src="./assets/banner.jpg" alt="banner" /> -->
+        <div class="header-text">
+          <h2>Lets make somethin greate</h2>
+          <p>be a good developer, write clean code, use DRY, KISS, YAGNM</p>
+        </div>
     </header>
     <section class="main-section">
-      <h4>Portfolio</h4>
-      <nav>
-        <ul>
-          <li>Clients</li>
-          <li>Products</li>
-          <li>Feedback</li>
-        </ul>
-      </nav>
-      <div class="main-content"></div>
+      <div class="container">
+        <p>Portfolio</p>
+        <nav class="nav-bar">
+          <ul class="nav-list">
+            <a>
+              <li class="nav-item">Clients</li>
+            </a>
+            <a>
+              <li class="nav-item">Products</li>
+            </a>
+            <a>
+              <li class="nav-item" >Feedback</li>
+            </a>
+          </ul>
+        </nav>
+        <div class="main-content"></div>
+      </div>
     </section>
     <section class="form-section">
-      <form>
-        <label>FIRST NAME</label>
-        <input type="text" />
+      <div class="container">
+         <h4>I WANT TO GET FRESH UPDATES</h4>
+        <form>
+<div class="form">
 
-        <label>EMAIL</label>
-        <input type="email" />
+  <label name="first name">FIRST NAME</label>
+  <input type="text" name="first name" />
 
-        <input type="checkbox" />
-        <label>I consent to the processing of personal data</label>
-        <button type="submit">Subscribe</button>
-      </form>
-    </section>
+  <label ame="email">EMAIL</label>
+  <input type="email" name="email" />
+ <div class="form-input-checkbox"> 
+
+   <input type="checkbox" name="consent"/>
+   <label name="consent">I consent to the processing of personal data</label>
+ </div>
+  <button type="submit" class="btn-submit">Subscribe</button>
+</div>
+        </form>
+      </section>
+      </div>
     <footer class="footer">
-      <h5>
-        All right reserved 2024
-      </h5>
+      <div class="container">
+        <h5>All right reserved 2024</h5>
+      </div>
     </footer>
   </body>
 </html>

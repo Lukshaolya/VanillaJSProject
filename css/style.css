@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-@import './constants.css';
+@import url("./constants.css");
+@import url("./header.css");
+@import url("./main.css");
+@import url("./form.css");
+@import url("./footer.css");
 
 html {
+  font-family: "Raleway";
   font-size: var(--font-size-text);
 }
 
@@ -9,10 +14,15 @@ body {
   margin: 0;
 }
 
-.header {
-}
-
 .container {
   margin: 0 auto;
   max-width: var(--content-width);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
 }
