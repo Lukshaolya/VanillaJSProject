@@ -4,6 +4,7 @@
 @import url("./main.css");
 @import url("./form.css");
 @import url("./footer.css");
+@import url("./popup.css");
 
 html {
   font-family: "Raleway";

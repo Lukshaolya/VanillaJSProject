@@ -43,21 +43,27 @@
     <section class="form-section">
       <div class="container">
          <h4>I WANT TO GET FRESH UPDATES</h4>
-        <form>
-<div class="form">
-
-  <label name="first name">FIRST NAME</label>
-  <input type="text" name="first name" />
-
-  <label ame="email">EMAIL</label>
-  <input type="email" name="email" />
- <div class="form-input-checkbox"> 
-
-   <input type="checkbox" name="consent"/>
-   <label name="consent">I consent to the processing of personal data</label>
- </div>
-  <button type="submit" class="btn-submit">Subscribe</button>
-</div>
+        <form class="js-form">
+          <div class="form">
+          <div class="form-section__field">
+            <label name="first name">FIRST NAME</label>
+            <input type="text" name="first name" class="js-name-input" />
+            <div class="form--error"></div>
+          </div>
+            
+          
+         <div class="form-section__field">
+            <label ame="email">EMAIL</label>
+            <input type="email" name="email" class="js-email-input" />
+            <div class="form--error"></div>
+         </div>
+            <div class="form-input-checkbox"> 
+              <label name="consent">I consent to the processing of personal data</label>
+              <input type="checkbox" name="consent" class="js-consent-input"/>
+              <div class="form--error"></div>
+            </div>
+            <button class="btn-submit">Subscribe</button>
+          </div>
         </form>
       </section>
       </div>
@@ -66,6 +72,8 @@
         <h5>All right reserved 2024</h5>
       </div>
     </footer>
+    <div class="popup js-popup">
+    </div>
      <script src="./scripts/index.js"></script>
   </body>
 </html>

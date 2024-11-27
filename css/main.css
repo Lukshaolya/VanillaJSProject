@@ -65,12 +65,12 @@ ul {
   border-radius: 50%;
 }
 
-.feedback-content {
+.feedback__content {
   font-size: 14px;
   text-align: center;
 }
 
-.feedback-author {
+.feedback__author {
   padding-top: 10px;
   font-size: 14px;
 }
