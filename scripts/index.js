@@ -5,18 +5,48 @@ const FEEDBACK_API =
 
 const cardsBlock = document.querySelector(".cards-block");
 const clientsLink = document.getElementById("clients");
-const produtsLink = document.getElementById("products");
+const productsLink = document.getElementById("products");
 const feedbackLink = document.getElementById("feedback");
 
+const preloaderBlock = document.querySelector(".js-preloader");
+const mainContentErrorBlock = document.querySelector(".js-content-error");
+
 const fetchData = async (api, sectionName) => {
+  let isLoading = false;
+  cardsBlock.innerHTML = "";
   try {
+    isLoading = true;
+    preloaderBlock.style.display = "flex";
     const res = await fetch(api);
     const data = await res.json();
     createComponet(data, sectionName);
   } catch (error) {
+    isLoading = false;
+    preloaderBlock.style.display = "none";
     console.log(error);
+    openErrorWindow(error.message);
+  } finally {
+    isLoading = false;
+    preloaderBlock.style.display = "none";
   }
 };
+
+const openErrorWindow = (msg) => {
+  mainContentErrorBlock.style.display = "block";
+  mainContentErrorBlock.innerHTML = `
+  <div class="popup-content">
+        <span class="close js-close-popup">&times;</span>
+        <h5 class="popup__title">${error.message}</h5>
+      </div>
+    </div>
+  `;
+};
+
+mainContentErrorBlock.addEventListener("click", function (event) {
+  if (event.target.classList.contains("js-close-popup")) {
+    mainContentErrorBlock.style.display = "none";
+  }
+});
 
 const createComponet = (data, sectionName) => {
   cardsBlock.innerHTML = "";
@@ -56,19 +86,32 @@ const createComponet = (data, sectionName) => {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
+  clientsLink.classList.add("active");
   fetchData(CLIENTS_API, "clients");
 });
+
+const removeActiveClass = () => {
+  clientsLink.classList.remove("active");
+  productsLink.classList.remove("active");
+  feedbackLink.classList.remove("active");
+};
 
 clientsLink.addEventListener("click", function () {
+  removeActiveClass();
   fetchData(CLIENTS_API, "clients");
+  clientsLink.classList.add("active");
 });
 
-produtsLink.addEventListener("click", function () {
+productsLink.addEventListener("click", function () {
+  removeActiveClass();
   fetchData(PRODUCTS_API, "products");
+  productsLink.classList.add("active");
 });
 
 feedbackLink.addEventListener("click", function () {
+  removeActiveClass();
   fetchData(FEEDBACK_API, "feedback");
+  feedbackLink.classList.add("active");
 });
 
 // FORM
