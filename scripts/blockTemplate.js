@@ -40,10 +40,9 @@ export const createMainContentComponent = (data, sectionName) => {
 export const createErrorPopupTmpl = (message, elementBlock) => {
   elementBlock.style.display = "block";
   elementBlock.innerHTML = `
-  <div class="popup-content">
-        <span class="close js-close-popup">&times;</span>
-        <h5 class="popup__title">${msg}</h5>
-      </div>
+    <div class="popup-content">
+      <span class="close js-close-popup">&times;</span>
+      <h5 class="popup__title">${message}</h5>
     </div>
   `;
 };
@@ -51,12 +50,11 @@ export const createErrorPopupTmpl = (message, elementBlock) => {
 export const createFormSubmitWindowTmpl = (name, email, selector) => {
   selector.style.display = "block";
   selector.innerHTML = `
-  <div class="popup-content">
-        <span class="close js-close-popup">&times;</span>
-        <h5 class="popup__title">Form submitted successfully!</h5>
-        <p>${name}</p>
-        <p>${email}</p>
-      </div>
+    <div class="popup-content">
+      <span class="close js-close-popup">&times;</span>
+      <h5 class="popup__title">Form submitted successfully!</h5>
+      <p>${name}</p>
+      <p>${email}</p>
     </div>
   `;
 };
