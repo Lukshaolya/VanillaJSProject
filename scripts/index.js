@@ -4,9 +4,9 @@ const FEEDBACK_API =
   "https://fakerapi.it/api/v1/texts?_quantity=6&_characters=300";
 
 const cardsBlock = document.querySelector(".cards-block");
-const clientsLink = document.getElementById("clients");
-const productsLink = document.getElementById("products");
-const feedbackLink = document.getElementById("feedback");
+const clientsLink = document.querySelectorAll(".js-clients-link");
+const productsLink = document.querySelectorAll(".js-products-link");
+const feedbackLink = document.querySelectorAll(".js-feedback-link");
 
 const preloaderBlock = document.querySelector(".js-preloader");
 const mainContentErrorBlock = document.querySelector(".js-content-error");
@@ -86,32 +86,44 @@ const createComponet = (data, sectionName) => {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  clientsLink.classList.add("active");
+  clientsLink.forEach((link) => link.classList.add("active"));
   fetchData(CLIENTS_API, "clients");
 });
 
 const removeActiveClass = () => {
-  clientsLink.classList.remove("active");
-  productsLink.classList.remove("active");
-  feedbackLink.classList.remove("active");
+  clientsLink.forEach((link) => {
+    link.classList.remove("active");
+  });
+  productsLink.forEach((link) => {
+    link.classList.remove("active");
+  });
+  feedbackLink.forEach((link) => {
+    link.classList.remove("active");
+  });
 };
 
-clientsLink.addEventListener("click", function () {
-  removeActiveClass();
-  fetchData(CLIENTS_API, "clients");
-  clientsLink.classList.add("active");
+clientsLink.forEach((link) => {
+  link.addEventListener("click", function () {
+    removeActiveClass();
+    fetchData(CLIENTS_API, "clients");
+    link.classList.add("active");
+  });
 });
 
-productsLink.addEventListener("click", function () {
-  removeActiveClass();
-  fetchData(PRODUCTS_API, "products");
-  productsLink.classList.add("active");
+productsLink.forEach((link) => {
+  link.addEventListener("click", function () {
+    removeActiveClass();
+    fetchData(PRODUCTS_API, "products");
+    link.classList.add("active");
+  });
 });
 
-feedbackLink.addEventListener("click", function () {
-  removeActiveClass();
-  fetchData(FEEDBACK_API, "feedback");
-  feedbackLink.classList.add("active");
+feedbackLink.forEach((link) => {
+  link.addEventListener("click", function () {
+    removeActiveClass();
+    fetchData(FEEDBACK_API, "feedback");
+    link.classList.add("active");
+  });
 });
 
 // FORM
@@ -206,3 +218,16 @@ window.onclick = function (event) {
     popup.style.display = "none";
   }
 };
+
+//Burger menu
+const burgerOpenBtn = document.querySelector(".js-burger-open-btn");
+const burgerMenuBlock = document.querySelector(".js-burger-menu-block");
+const burgerMenuCloseBtn = document.querySelector(".js-burger-menu-close-btn");
+
+burgerOpenBtn.addEventListener("click", function () {
+  burgerMenuBlock.classList.add("open");
+});
+
+burgerMenuCloseBtn.addEventListener("click", function () {
+  burgerMenuBlock.classList.remove("open");
+});

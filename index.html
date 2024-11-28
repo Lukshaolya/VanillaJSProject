@@ -8,11 +8,35 @@
   </head>
   <body>
     <header class="header">
-        <div class="burger-menu"></div>
-        <!-- <img src="./assets/banner.jpg" alt="banner" /> -->
+      <div class="burger-menu__open-btn js-burger-open-btn">
+            <svg viewBox="0 0 488 488" id="burger-menu" fill="var(--color-red)">       
+               <path d="M64.192,108.444h359.617c29.943,0,54.223-24.278,54.223-54.222C478.031,24.278,453.754,0,423.809,0H64.192            C34.248,0,9.969,24.278,9.969,54.222C9.969,84.166,34.248,108.444,64.192,108.444z"/>        <path d="M423.809,189.778H64.192c-29.944,0-54.223,24.278-54.223,54.222c0,29.943,24.278,54.223,54.223,54.223h359.617c29.945,0,54.223-24.279,54.223-54.223C478.031,214.056,453.754,189.778,423.809,189.778z"/>        <path d="M423.809,379.557H64.192c-29.944,0-54.223,24.277-54.223,54.222C9.969,463.722,34.248,488,64.192,488h359.617            c29.945,0,54.223-24.278,54.223-54.222C478.031,403.834,453.754,379.557,423.809,379.557z"/></svg>
+          </div>
+        <div class="burger-menu__container js-burger-menu-block">
+          
+          <div class="burger-menu__content">
+             <div>
+              <span class="burger-menu__close-btn js-burger-menu-close-btn">&times;</span>
+             </div>
+            <img  class="burger-menu__banner" src="./assets/burger-menu.jpg" alt="burger-menu" />
+            <nav class="burger-menu_nav">
+              <ul class="nav-list">
+                <a class="js-clients-link" href="#">
+                  <li class="nav-item">Clients</li>
+                </a>
+                <a class="js-products-link" href="#">
+                  <li class="nav-item">Products</li>
+                </a>
+                <a class="js-feedback-link" href="#">
+                  <li class="nav-item" >Feedback</li>
+                </a>
+              </ul>
+            </nav>
+          </div>
+        </div>
         <div class="header-text">
-          <h2>Lets make somethin greate</h2>
-          <p>be a good developer, write clean code, use DRY, KISS, YAGNM</p>
+          <h2>Let Make Something Great</h2>
+          <p>be a good developer, write clean code, use DRY, KISS, YAGN</p>
         </div>
     </header>
     <section class="main-section">
@@ -20,15 +44,15 @@
         <p>Portfolio</p>
         <nav class="nav-bar">
           <ul class="nav-list">
-            <a id="clients" href="#">
-              <li class="nav-item">Clients</li>
-            </a>
-            <a id="products" href="#">
-              <li class="nav-item">Products</li>
-            </a>
-            <a id="feedback" href="#">
-              <li class="nav-item" >Feedback</li>
-            </a>
+             <a class="js-clients-link" href="#">
+               <li class="nav-item">Clients</li>
+             </a>
+             <a class="js-products-link" href="#">
+               <li class="nav-item">Products</li>
+             </a>
+             <a class="js-feedback-link" href="#">
+               <li class="nav-item" >Feedback</li>
+             </a>
           </ul>
         </nav>
         <div class="main-content">

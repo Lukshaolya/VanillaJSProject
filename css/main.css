@@ -26,10 +26,6 @@ ul {
   padding: 5px 10px;
 }
 
-.nav-item:active {
-  border-bottom: 2px solid var(--color-red);
-}
-
 .active {
   border-bottom: 2px solid var(--color-red);
 }
