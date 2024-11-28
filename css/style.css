@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("./constants.css");
+@import url("./header.css");
+@import url("./main.css");
+@import url("./form.css");
+@import url("./footer.css");
+@import url("./popup.css");
+@import url("./burgermenu.css");
+
+html {
+  font-family: "Raleway";
+  font-size: var(--font-size-text);
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: var(--content-width);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+p {
+  margin: 0;
+}
+
+h5 {
+  text-align: center;
+}
