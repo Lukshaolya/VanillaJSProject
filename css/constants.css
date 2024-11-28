@@ -1,0 +1,15 @@
+:root {
+  --content-width: 1100px;
+  --color-background-header: brown;
+
+  --font-size-text: 16px;
+  --font-size-title: 24px;
+  --font-size-heading: 32px;
+  --font-size-main-heading: 48px;
+
+  --color-red: #fb6470;
+  --color-dark: #353541;
+  --color-white: #fff;
+  --color-blue: #0093b5;
+  --color-grey: rgb(224, 219, 219);
+}
