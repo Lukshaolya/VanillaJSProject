@@ -4,7 +4,7 @@ import { validate } from "./formValidation.js";
 import { createFormSubmitWindowTmpl } from "./blockTemplate.js";
 import { toggleElementClass } from "./toggleElemVisibility.js";
 
-const CLIENTS_API = "https://rickandmortyapi.com/api/character";
+const CLIENTS_API = "https://rickandmortyapi.com/api/character?limit=6";
 const PRODUCTS_API = "https://fakestoreapi.com/products?limit=6";
 const FEEDBACK_API =
   "https://fakerapi.it/api/v1/texts?_quantity=6&_characters=300";
@@ -42,7 +42,6 @@ mainContentErrorBlock.addEventListener("click", function (event) {
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   const nameValue = nameInput.value.trim();
-  console.log(nameValue, nameInput);
   const emailValue = emailInput.value.trim();
   const consentCheck = consentInput.checked;
   const hasError = validate(nameValue, emailValue, consentCheck);
